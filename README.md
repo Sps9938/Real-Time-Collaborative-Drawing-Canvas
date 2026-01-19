@@ -30,6 +30,17 @@ npm run dev
 ```
 That runs both the websocket server and the Vite client (via `concurrently`).
 
+## Deploying: frontend on Vercel, backend on Render
+- Frontend (Vercel): build from `Frontend` using `npm install && npm run build`; set `VITE_SERVER_URL` to your Render backend URL.
+- Backend (Render Web Service):
+	- Root Directory: `Server`
+	- Build Command: `npm install`
+	- Start Command: `npm run server` (or `node server/server.js`)
+	- Env vars: `CLIENT_ORIGIN=https://your-vercel-frontend-domain`, `NODE_ENV=production` (optional). Render provides `PORT` automatically; do not override.
+	- This avoids the build error `Could not resolve "/opt/render/project/src/client/vite.config.js"`, which happens when Render tries to build from the repo root instead of `Server`.
+
+Once deployed, redeploy Vercel so the client picks up the correct `VITE_SERVER_URL` and sockets connect.
+
 ## What the project delivers
 - Real-time drawing with brushes, eraser, colors, and stroke widths
 - Live cursor indicators and online user list
