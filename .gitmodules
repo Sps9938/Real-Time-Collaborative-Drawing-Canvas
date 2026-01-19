@@ -1,3 +1,7 @@
 [submodule "Frontend"]
 	path = Frontend
 	url = https://github.com/Sps9938/Real-Time-Collaborative-Drawing-Canvas-Frontend.git
+
+[submodule "Server"]
+	path = Server
+	url = https://github.com/Sps9938/Real-Time-Collaborative-Drawing-Canvas-Server.git
