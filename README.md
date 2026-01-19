@@ -44,6 +44,12 @@ Then open http://localhost:5173. If the backend port/origin differs, update `VIT
 ## Demo (video)
 - Explanation and walkthrough: [Watch on Google Drive](https://drive.google.com/file/d/1S-QlwkCx6pGZV5wf9R5jVWoJgFhTPjnL/view?usp=drive_link)
 
+## Live app
+- Try it here: [Open the deployed canvas](https://real-time-collaborative-drawing-can-rho.vercel.app/)
+
+## Contact
+- Email: satyaprakash.8455995130@gmail.com
+
 ## Known limitations / bugs
 - In-memory state: strokes and presence reset when the server restarts.
 - Undo/redo operates per committed stroke, not per-segment.
